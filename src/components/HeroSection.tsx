@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroShoe from "@/assets/hero-shoe.jpg";
+import LazyImage from "@/components/LazyImage";
 
 const HeroSection = () => {
   return (
@@ -51,10 +52,13 @@ const HeroSection = () => {
           {/* Right side - Hero image */}
           <div className="relative">
             <div className="relative z-10">
-              <img 
+              <LazyImage 
                 src={heroShoe} 
-                alt="Premium footwear collection" 
+                alt="Premium athletic shoe with modern design - FootwearFlow collection" 
                 className="w-full h-auto object-cover rounded-2xl shadow-elegant"
+                priority={true}
+                width={600}
+                height={400}
               />
             </div>
             {/* Decorative elements */}

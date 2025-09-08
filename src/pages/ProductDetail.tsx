@@ -7,6 +7,8 @@ import { ArrowLeft, Heart, Star, Minus, Plus, ShoppingCart } from 'lucide-react'
 import { products } from '@/data/products';
 import { useCart } from '@/contexts/CartContext';
 import { useToast } from '@/hooks/use-toast';
+import SEO from '@/components/SEO';
+import LazyImage from '@/components/LazyImage';
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -74,6 +76,20 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background pt-20">
+      <SEO 
+        title={product.name}
+        description={product.description}
+        image={product.colors[selectedColor].image}
+        type="product"
+        productData={{
+          price: product.price,
+          availability: product.inStock ? 'InStock' : 'OutOfStock',
+          brand: 'FootwearFlow',
+          category: product.category,
+          rating: product.rating,
+          reviewCount: 124
+        }}
+      />
       <div className="container mx-auto px-6 py-8">
         {/* Back button */}
         <Button
@@ -89,10 +105,11 @@ const ProductDetail = () => {
           {/* Product Images */}
           <div className="space-y-4">
             <div className="relative">
-              <img
+              <LazyImage
                 src={mainImage}
-                alt={product.name}
+                alt={`${product.name} - ${product.colors[selectedColor].name}`}
                 className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-elegant"
+                priority={true}
               />
               <Button
                 variant="ghost"
@@ -118,9 +135,9 @@ const ProductDetail = () => {
                       : 'border-border hover:border-accent/50'
                   }`}
                 >
-                  <img
+                  <LazyImage
                     src={color.image}
-                    alt={color.name}
+                    alt={`${product.name} in ${color.name}`}
                     className="w-full h-full object-cover"
                   />
                 </button>

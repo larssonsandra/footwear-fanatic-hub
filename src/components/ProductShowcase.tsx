@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Heart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { products } from "@/data/products";
+import LazyImage from "@/components/LazyImage";
 
 const ProductShowcase = () => {
 
@@ -20,13 +21,15 @@ const ProductShowcase = () => {
           {products.map((product) => (
             <Card key={product.id} className="group border-0 shadow-elegant hover:shadow-glow transition-all duration-500 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-0">
-                <Link to={`/product/${product.id}`} className="block">
-                  <div className="relative overflow-hidden rounded-t-lg cursor-pointer">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                  <Link to={`/product/${product.id}`} className="block">
+                    <div className="relative overflow-hidden rounded-t-lg cursor-pointer">
+                      <LazyImage 
+                        src={product.image} 
+                        alt={`${product.name} - ${product.category} footwear`}
+                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                        width={300}
+                        height={256}
+                      />
                     <div className="absolute top-4 right-4">
                       <Button variant="ghost" size="icon" className="bg-glass backdrop-blur-sm hover:bg-glass/80">
                         <Heart className="h-4 w-4" />

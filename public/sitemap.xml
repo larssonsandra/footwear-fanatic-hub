@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://footwearflow.lovable.app/</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://footwearflow.lovable.app/hero-shoe.jpg</image:loc>
+      <image:caption>FootwearFlow Premium Footwear Collection</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://footwearflow.lovable.app/product/1</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&amp;h=600&amp;fit=crop</image:loc>
+      <image:caption>Air Max Revolution - Premium Running Shoes</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://footwearflow.lovable.app/product/2</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&amp;h=600&amp;fit=crop</image:loc>
+      <image:caption>Urban Explorer - Premium Lifestyle Shoes</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://footwearflow.lovable.app/product/3</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&amp;h=600&amp;fit=crop</image:loc>
+      <image:caption>Elite Performance - Professional Training Shoes</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://footwearflow.lovable.app/product/4</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&amp;h=600&amp;fit=crop</image:loc>
+      <image:caption>Classic Heritage - Timeless Casual Footwear</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://footwearflow.lovable.app/checkout</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
