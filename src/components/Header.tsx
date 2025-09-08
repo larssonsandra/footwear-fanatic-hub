@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ShoppingBag, Menu } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { state } = useCart();
+  const navigate = useNavigate();
   const cartItemsCount = state.items.reduce((total, item) => total + item.quantity, 0);
 
   return (
@@ -27,7 +28,12 @@ const Header = () => {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="relative">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="relative"
+              onClick={() => navigate('/checkout')}
+            >
               <ShoppingBag className="h-5 w-5" />
               {cartItemsCount > 0 && (
                 <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs">
